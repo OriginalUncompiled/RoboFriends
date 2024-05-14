@@ -1,0 +1,15 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	background: linear-gradient(to left, rgb(9, 34, 105) 0%, rgba(0, 128, 128, 1) 100%);
+}
+
+h2 {
+	color: #212121;
+	text-shadow:1px 1px #666666;
+}
