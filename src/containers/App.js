@@ -32,12 +32,14 @@ class App extends Component {
         return !robots.length ? // if robots.length = 0
         <h1 className='tc'>Loading...</h1> : // do this, ':' = else
         <div className='tc'>
-            <h1>RoboFriends</h1>
-            <SearchBox searchChange={this.onSearchChange} />
-            <Scroll>
+            <div style={{height: '16vh'}}>
+                <h1>RoboFriends</h1>
+                <SearchBox searchChange={this.onSearchChange} />
+            </div>
+            <Scroll style={{height: '80vh'}}>
                 <ErrorBoundary>
                     {!filteredRobots.length ? ( // if filteredRobots.length = 0
-                        <h2 className='tc f2 pa5'>Can't find a robot with '{searchfield}' in their name...</h2>
+                        <h2 className='tc f2 pa5 nonCardH2'>Can't find a robot with '{searchfield}' in their name...</h2>
                         ) : ( // else
                         <CardList robots={filteredRobots} />
                     )}
